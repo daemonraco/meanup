@@ -23,7 +23,6 @@ module.exports = program => {
             const clientDir = path.join(currentDir, name, 'client');
             const dirStat = fs.existsSync(destination) ? fs.statSync(destination) : null;
 
-            /*
             if (dirStat) {
                 if (!dirStat.isDirectory()) {
                     error = `Path '${destination}' exists and it's not a directory`;
@@ -45,7 +44,6 @@ module.exports = program => {
                     error = `There was a problem cloning.`;
                 }
             }
-            */
 
             if (!error) {
                 process.chdir(name);
@@ -67,18 +65,6 @@ module.exports = program => {
                     error = `There was a problem initiaizing client modules.`;
                 }
             }
-
-
-
-
-            /*
-                        console.log(`DEBUG START name:  ${name}`);
-                        console.log(`DEBUG START OS:    ${tools.platform()}`);
-                        console.log(`DEBUG START PWD:   ${process.cwd()}`);
-                        console.log(`DEBUG START DEST:  ${destination}`);
-                        console.log(`DEBUG START Error: ${error}`);
-                        console.log(`DEBUG START stat:  ${JSON.stringify(dirStat, null, 2)}`);
-                        */
 
             if (error) {
                 console.error(chalk.red(`\nError: ${error}`));
