@@ -1,0 +1,17 @@
+{
+  "name": "meanup",
+  "version": "0.0.1",
+  "description": "@todo working progress",
+  "main": "meanup.js",
+  "bin": {
+    "meanup": "meanup.js"
+  },
+  "keywords": [],
+  "author": "Alejandro Dario Simi",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "child_process": "^1.0.2",
+    "commander": "^2.11.0"
+  }
+}
