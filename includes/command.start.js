@@ -1,9 +1,14 @@
 'use strict';
 
+//
+// Required libraries.
 const chalk = require('chalk');
 const childProcess = require('child_process');
 const fs = require('fs');
 const path = require('path');
+
+//
+// Required internal libraries.
 const tools = require('./tools');
 
 const { expandCommand, outputCommandResults } = tools;
@@ -14,8 +19,6 @@ module.exports = program => {
         .description('@todo')
         .alias('s')
         .action((name, params) => {
-
-
             let error = false;
 
             const currentDir = process.cwd();

@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
+//
+// Required libraries.
 const fs = require('fs');
 const program = require('commander');
 const path = require('path');
