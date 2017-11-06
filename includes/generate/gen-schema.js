@@ -9,10 +9,10 @@ const twig = require('twig');
 
 //
 // Required internal libraries.
-const tools = require('./tools');
+const tools = require('../tools');
 
 class GenSchema {
-    generate(name, params, callback) {
+    generate({ name, params, program }, callback) {
         let error = '';
 
         const destination = path.join(process.cwd(), 'schemas', `${name}.schema.js`);

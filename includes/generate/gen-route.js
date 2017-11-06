@@ -8,7 +8,7 @@ const path = require('path');
 const twig = require('twig');
 
 class GenRoute {
-    generate(name, params, callback) {
+    generate({ name, params }, callback) {
         const destination = path.join(process.cwd(), 'routes', `${name}.route.js`);
 
         console.log(`Generating route '${name}'...`);

@@ -1,6 +1,6 @@
 {
   "name": "meanup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "@todo working progress",
   "main": "meanup.js",
   "bin": {

@@ -16,7 +16,7 @@ const { expandCommand, outputCommandResults } = tools;
 module.exports = program => {
     program
         .command('start <name>')
-        .description('@todo')
+        .description('@todo doc')
         .alias('s')
         .action((name, params) => {
             let error = false;

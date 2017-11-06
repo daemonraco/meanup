@@ -12,16 +12,24 @@ const tools = require('./tools');
 
 module.exports = program => {
     program
-        .command('generate <type> [params...]')
+        .command('generate <type> <name>')
+        .description('@todo doc')
         .alias('g')
-        .action((type, params) => {
+        //.option('-n, --no-provider', 'It generates the schema, but not is counter part in Angular.')
+        .action((type, name, params) => {
             if (tools.isMeanDirectory()) {
+                const genParams = {
+                    type,
+                    name,
+                    program,
+                    params
+                };
                 switch (type) {
                     case 'route':
                         if (params.length < 1) {
                             console.error(`Error: No route name given`);
                         } else {
-                            GenRoute.generate(params[0], params, error => {
+                            GenRoute.generate(genParams, error => {
                                 if (error) {
                                     console.error(chalk.red(`Error: ${error}`));
                                 }
@@ -32,7 +40,7 @@ module.exports = program => {
                         if (params.length < 1) {
                             console.error(`Error: No schema name given`);
                         } else {
-                            GenSchema.generate(params[0], params, error => {
+                            GenSchema.generate(genParams, error => {
                                 if (error) {
                                     console.error(chalk.red(`Error: ${error}`));
                                 }
