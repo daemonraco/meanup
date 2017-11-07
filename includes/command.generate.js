@@ -15,7 +15,6 @@ module.exports = program => {
         .command('generate <type> <name>')
         .description('@todo doc')
         .alias('g')
-        //.option('-n, --no-provider', 'It generates the schema, but not is counter part in Angular.')
         .action((type, name, params) => {
             if (tools.isMeanDirectory()) {
                 const genParams = {
@@ -54,4 +53,6 @@ module.exports = program => {
                 console.error(`Error: Current location does not seem to be a MEAN directory.`);
             }
         });
+    program
+        .option('-n, --no-provider', 'It generates the schema, but not is counter part in Angular.');
 };

@@ -11,7 +11,7 @@ class GenRoute {
     generate({ name, params }, callback) {
         const destination = path.join(process.cwd(), 'routes', `${name}.route.js`);
 
-        console.log(`Generating route '${name}'...`);
+        console.log(chalk.green(`Generating route '${name}'...`));
         if (!fs.existsSync(destination)) {
             twig.renderFile(path.join(__dirname, 'templates', 'route.js.twig'), { name }, (err, contents) => {
                 if (err) {

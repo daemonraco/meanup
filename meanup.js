@@ -7,7 +7,7 @@ const fs = require('fs');
 const program = require('commander');
 const path = require('path');
 
-program.version('0.0.2');
+program.version('0.0.3');
 
 const commandPattern = /^command\..+\.js$/;
 fs.readdirSync(path.join(__dirname, 'includes'))

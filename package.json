@@ -1,6 +1,6 @@
 {
   "name": "meanup",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "@todo working progress",
   "main": "meanup.js",
   "bin": {
@@ -26,6 +26,7 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "child_process": "^1.0.2",
-    "commander": "^2.11.0"
+    "commander": "^2.11.0",
+    "twig": "^1.10.5"
   }
 }

@@ -2,6 +2,7 @@
 
 //
 // Required libraries.
+const chalk = require('chalk');
 const fs = require('fs');
 
 //
@@ -16,6 +17,7 @@ platform = /sunos/.test(process.platform) ? 'sunos' : platform;
 //
 // Adapting commands depending on current platform @{
 const expandCommandConf = {
+    ng: { windows: 'ng.cmd' },
     npm: { windows: 'npm.cmd' }
 };
 const expandCommand = command => {
