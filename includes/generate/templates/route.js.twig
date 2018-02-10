@@ -8,18 +8,6 @@ module.exports = ({ routeName, app }) => {
     const router = express.Router();
     // @}
 
-    //
-    // Environment configurations @{
-    const mainConf = configs.get('main');
-    // @}
-
-    //
-    // Avoid CORS validations.
-    if (!mainConf.respectCORS) {
-        const cors = require('cors');
-        router.all('*', cors());
-    }
-
     router.get('/', (req, res) => {
         res.json({
             message: "this is an example endpoint"
